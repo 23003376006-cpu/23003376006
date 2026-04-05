@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html laguage="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isha Nabeel – CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700;900&display=swap" rel="stylesheet">
+
+
+  <!-- ======================== CSS STYLING ===================================== -->
+  <style>
+  
+    body 
+    {
+
+      font-family: 'Ubuntu', 'fontUbuntu Fallback';
+      background: #fff;
+      color: #222;
+      font-size: 13px;
+      line-height: 1.45;
+
+    }
+
+    /* Page  */
+    .cv 
+    {
+      width: 680px;
+      margin: 0 auto;
+      background: #fff;
+      border: 2px;
+      border-color: #111;
+    }
+
+    /* =============================  HEADER ===================================*/
+    .header 
+    {
+      display: flex;
+      align-items: stretch;
+      gap: 16px;
+      padding: 20px 24px 18px;
+      background: #fff;
+      color: #000000;
+    }
+
+
+    .header__name 
+    {
+      font-size: 25px;
+      font-weight: 900;
+    }
+
+    .header__title 
+    {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .header__bio 
+    {
+      font-size: 12.5px;
+      color: #000000;
+    }
+ 
+    .header__pic-wrap 
+    {
+      width: 100px;
+      min-width: 120px;
+      align-self: stretch;
+      flex-shrink: 0;
+    }
+
+    .header__pic 
+    {
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+       /* =============================  CONTACT BAR ===================================*/
+    .contact
+    {
+      background: #000000;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      padding: 9px 24px;
+      font-size: 11.5px;
+    }
+
+    .contact_item 
+    {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+
+    /* ============================= MAIN BODY ============================== */
+    .body 
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      padding: 0 24px 28px;
+      margin-top: 18px;
+    }
+
+    .col_left 
+    {
+      padding-right: 15px;
+    }
+
+    .col_right 
+    {
+      padding-left: 15px;
+    }
+
+    /*================================= HEADING ================================= */
+    .section 
+    {
+      margin-bottom: 20px;
+    }
+
+    .section__heading 
+    {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #111;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    .col_left .section__heading 
+    {
+      padding-left: 6px;
+      border-bottom: none;
+
+    }
+
+    /* ========================= EDUCATION =============================== */
+    .Uni {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+      position: relative;
+      padding-left: 20px;
+      margin-left: -24px;
+    }
+
+    .degree 
+    {
+      font-size: 13px;
+      color: #111;
+    }
+
+    .courses 
+    {
+      font-size: 10px;
+      color: #666;
+      font-style: italic;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    /*============================ PROJECT ===========================*/
+    .project 
+    {
+      margin-bottom: 14px;
+    }
+
+    .P_name 
+    {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .P_role 
+    {
+      font-size: 12px;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    .P_desc 
+    {
+      font-size: 11px;
+      color: #555;
+      font-style: italic;
+    }
+
+    /* ================================ SKILL =================================== */
+    .skills-wrap 
+    {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .skill_box
+    {
+      font-size: 13px;
+      font-weight: 200;
+      padding: 2px 8px;
+      margin: 2px;
+      border: 1px solid #bbb;
+      border-radius: 3px;
+      background: #B1B1B1;
+      color: #000000;
+      white-space: nowrap;
+    }
+
+    /* ================== ACHIEVEMENTS ============================*/
+    .achievement 
+    {
+      margin-bottom: 10px;
+    }
+
+    .achievement_title 
+    {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .achievement_sub 
+    {
+      font-size: 12px;
+      color: #000000;
+    }
+
+    /* ========================= certificateIFICATES ============================*/
+    .certificate
+    {
+      margin-bottom: 9px;
+    }
+
+    .certificate_name 
+    {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .certificate_org 
+    {
+      font-size: 12px;
+      color: #000000;
+    }
+
+    /* ========================== LANGUAGE ======================== */
+    .laguage_box
+    {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px 8px;
+    }
+
+    .laguage_name 
+    {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .laguage_level 
+    {
+      font-size: 10.5px;
+      color: #000000;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    /* INTERESTS  */
+    .interests_box 
+    {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .interest_tag 
+    {
+      font-size: 13px;
+      padding: 3px 10px;
+      border: 1px solid #000000;
+      border-radius: 5px;
+      background: #ffffff;
+      color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cv" style="border: 2px; box-shadow: 4px 4px 15px rgba(0,0,0,0.4);">
+    <!--  HEADER  -->
+    <div class="header">
+      <div class="header__pic-wrap">
+        <img class="header__pic" src="pic.webp" alt="Isha Nabeel – profile photo" />
+      </div>
+      <div class="header__text">
+        <div class="header__name">Isha Nabeel</div>
+        <div class="header__title">AI undergraduate</div>
+        <p class="header__bio">
+          Motivated and detail-oriented AI student with a strong foundation in C++, Python, and
+          SQL. Recognized for problem-solving abilities, analytical thinking, and adaptability in
+          fast-paced environments. Eager to apply technical skills in AI and data analysis to real-
+          world challenges.
+        </p>
+      </div>
+    </div>
+
+
+    <!--  CONTACT  -->
+    <div class="contact">
+
+      <div class="contact_item">
+        <svg viewBox="0 0 512 512" style="width:13px;height:13px;fill:#ffffff;stroke:none;">
+          <path
+            d="M0 122.5l0-2.5 .1 0C1.3 88.9 27 64 58.5 64l395 0c31.5 0 57.1 24.9 58.4 56l.1 0 0 264c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 122.5zm480 53.1L303.3 305.1c-28.2 20.6-66.5 20.6-94.6 0L32 175.6 32 384c0 17.7 14.3 32 32 32l384 0c17.7 0 32-14.3 32-32l0-208.4zm0-53.1c0-14.6-11.9-26.5-26.5-26.5l-395 0c-14.6 0-26.5 11.9-26.5 26.5 0 8.4 4 16.4 10.8 21.4L227.6 279.3c16.9 12.4 39.9 12.4 56.8 0L469.2 143.8c6.8-5 10.8-12.9 10.8-21.4z" />
+        </svg>
+        23003376006@skt.umt.edu.pk
+      </div>
+
+      <div class="contact_item">
+        <svg viewBox="0 0 384 512" style="width:10px;height:13px;fill:#ffffff;stroke:none;">
+          <path
+            d="M80 32C62.3 32 48 46.3 48 64l0 384c0 17.7 14.3 32 32 32l224 0c17.7 0 32-14.3 32-32l0-384c0-17.7-14.3-32-32-32L80 32zM16 64C16 28.7 44.7 0 80 0L304 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L80 512c-35.3 0-64-28.7-64-64L16 64zM160 400l64 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-64 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+        </svg>
+        +92 03187268056
+      </div>
+
+      <div class="contact_item">
+        <svg viewBox="0 0 640 512" style="width:16px;height:13px;fill:#ffffff;stroke:none;">
+          <path
+            d="M576 26.7c0-5.6-2.9-10.7-7.6-13.6s-10.6-3.2-15.6-.7L416.9 80.7 242.6 22.6c-11.5-3.8-24-3.2-35 1.8L73.4 85.3C67.7 87.9 64 93.6 64 99.9l0 385.4c0 5.6 2.9 10.7 7.6 13.6s10.6 3.2 15.6 .7l135.9-68.4 174.3 58.1 .6 .2c-3.7-5.6-7.3-11.3-10.8-17.1-4.7-7.8-9.4-16.1-13.8-24.8l-133.4-44.5 0-347.7 160 53.3 0 109.4c9.7-8.6 20.5-16.1 32-22.2l0-87 112-56.4 0 126.4c11.1 2.1 21.8 5.3 32 9.5l0-161.8zM208 403L96 459.4 96 110.2 208 59.4 208 403zM512 256c49.1 0 88 39 88 85.9 0 25.6-12.4 57.1-31.8 89.4-18 29.9-39.9 57.1-56.2 75.8-16.4-18.7-38.2-45.8-56.2-75.8-19.4-32.3-31.8-63.8-31.8-89.4 0-46.9 38.9-85.9 88-85.9zM392 341.9c0 68.9 64.1 150.4 98.6 189.3 11.6 13 31.3 13 42.9 0 34.5-38.9 98.6-120.4 98.6-189.3 0-65.1-53.7-117.9-120-117.9S392 276.8 392 341.9zM512 368a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm-56-24a56 56 0 1 0 112 0 56 56 0 1 0 -112 0z" />
+        </svg>
+        Sialkot, Pakistan
+      </div>
+
+    </div>
+
+
+    <!-- ════════════ BODY ════════════ -->
+    <div class="body">
+
+      <!-- ── LEFT COLUMN ── -->
+      <div class="col_left">
+
+        <!-- EDUCATION -->
+        <div class="section">
+          <div class="section__heading">EDUCATION</div>
+          <div class="Uni">University of Management and Technology</div>
+          <div class="degree">Bachelor's in Artificial Intelligence</div>
+          <p class="courses">
+            Relevant CourseWork: Object Oriented Programming,
+            Programming Fundamentals, Data Structures &amp; Algorithms,
+            Database Systems, Artificial Intelligence, Machine Learning,
+            Operating Systems
+          </p>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="section">
+          <div class="section__heading">PROJECTS</div>
+
+          <div class="project">
+            <div class="P_name">Fake News Detection System</div>
+            <div class="P_role">Developer</div>
+            <p class="P_desc">
+              Built a system to classify news articles as real or fake using
+              Decision Tree, Random Forest, and Logistic Regression.
+              Applied text vectorization techniques for feature
+              extraction. Integrated OpenRouter API as an edge-case
+              fallback for uncertificateain predictions.
+            </p>
+          </div>
+
+          <div class="project">
+            <div class="P_name">Cybercrime RAG System (PECA 2016)</div>
+            <div class="P_role">Developer</div>
+            <p class="P_desc">
+              Developed a Retrieval-Augmented Generation system for
+              cybercrime law queries. Used PECA 2016 as the legal
+              knowledge base for retrieval and AI-generated
+              explanations.
+            </p>
+          </div>
+
+          <div class="project">
+            <div class="P_name">Airline Database Management System</div>
+            <div class="P_role">Developer</div>
+            <p class="P_desc">
+              Designed a relational database using SQL for airline
+              operations, including flights, passengers, and bookings.
+              Implemented queries for flight tracking and booking
+              management.
+            </p>
+          </div>
+
+          <div class="project">
+            <div class="P_name">Bank Management System</div>
+            <div class="P_role">Developer</div>
+            <p class="P_desc">
+              Developed a console-based Bank Management System
+              using C++ that allows users to create accounts, deposit and
+              withdraw money, check balances, and manage customer
+              records.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ── RIGHT COLUMN ── -->
+      <div class="col_right">
+
+        <!-- SKILLS -->
+        <div class="section">
+          <div class="section__heading">SKILLS</div>
+          <div class="skills-wrap">
+            <span class="skill_box">NLP</span>
+            <span class="skill_box">RAG</span>
+            <span class="skill_box">Data Visualization</span>
+            <span class="skill_box">Machine Learning</span>
+            <span class="skill_box">Python</span>
+            <span class="skill_box">Assembly</span>
+            <span class="skill_box">HTML</span>
+            <span class="skill_box">CSS</span>
+            <span class="skill_box">SQL</span>
+            <span class="skill_box">C++</span>
+          </div>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <div class="section">
+          <div class="section__heading">ACHIEVEMENTS</div>
+
+          <div class="achievement">
+            <div class="achievement_title">Code Sprint Competition | 2025</div>
+            <div class="achievement_sub">Runner-up, Gift University</div>
+          </div>
+
+          <div class="achievement">
+            <div class="achievement_title">Quiz Competition | 2025</div>
+            <div class="achievement_sub">3rd Position, UMT</div>
+          </div>
+
+        </div>
+
+        <!-- certificateIFICATES -->
+        <div class="section">
+          <div class="section__heading">certificateIFICATES</div>
+
+          <div class="certificate">
+            <div class="certificate_name">SQL (Intermediate)</div>
+            <div class="certificate_org">HackerRank</div>
+          </div>
+
+          <div class="certificate">
+            <div class="certificate_name">Soft Skills Training</div>
+            <div class="certificate__org">OEC &amp; ICMPD</div>
+          </div>
+
+          <div class="certificate">
+            <div class="certificate_name">Data Visualization</div>
+            <div class="certificate_org">DataCamp</div>
+          </div>
+
+        </div>
+
+        <!-- laguageUAGES -->
+        <div class="section">
+          <div class="section__heading">laguageUAGES</div>
+          <div class="laguage_box">
+
+            <div>
+              <div class="laguage_name">English</div>
+              <div class="laguage_level">Professional Working Proficiency</div>
+            </div>
+
+            <div>
+              <div class="laguage_name">Urdu</div>
+              <div class="laguage_level">Native or Bilingual Proficiency</div>
+            </div>
+
+            <div>
+              <div class="laguage_name">Sign laguageuage</div>
+              <div class="laguage_level">Elementary Proficiency</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- INTERESTS -->
+        <div class="section">
+          <div class="section__heading">INTERESTS</div>
+          <div class="interests_box">
+            <span class="interest_tag">Chess</span>
+            <span class="interest_tag">Case studies</span>
+            <span class="interest_tag">Coding challenges</span>
+            <span class="interest_tag">Reading</span>
+            <span class="interest_tag">Sleeping</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
